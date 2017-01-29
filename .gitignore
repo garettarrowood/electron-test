@@ -1,1 +1,12 @@
 /node_modules
+/node_modules/electron-prebuilt/package.json
+
+/electron-test-darwin-x64
+/electron-test-linux-armv7l
+/electron-test-linux-ia32
+/electron-test-linux-x64
+/electron-test-mas-x64
+/electron-test-win32-ia32
+/electron-test-win32-x64
+
+.DS_Store
