@@ -1,5 +1,6 @@
 const electron = require('electron')
 const {app, BrowserWindow} = electron
+const { ipcMain } = require('electron')
 
 app.on('ready', () => {
   let win = new BrowserWindow({
@@ -10,4 +11,8 @@ app.on('ready', () => {
   })
   win.on('close', function () { win = null })
   win.loadURL("https://nitro.powerhrg.com/connect")
+})
+
+ipcMain.on('close-main-window', () => {
+  app.quit()
 })
