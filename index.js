@@ -1,12 +1,13 @@
+const electron = require('electron')
+const {app, BrowserWindow} = electron
 
-const remote = require('electron').remote
-const main = remote.require('./main.js')
-
-let button = document.createElement('button')
-button.textContent = "Open Window"
-button.addEventListener('click', () => {
-  main.openWindow()
-}, false)
-
-document.body.appendChild(button)
-
+app.on('ready', () => {
+  let win = new BrowserWindow({
+    width: 800,
+    height: 600,
+    title: "Connect",
+    titleBarStyle: "hidden",
+  })
+  win.on('close', function () { win = null })
+  win.loadURL("https://nitro.powerhrg.com/connect")
+})
