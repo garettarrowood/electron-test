@@ -6,7 +6,7 @@ app.on('ready', () => {
     width: 800,
     height: 600,
     title: "Connect",
-    titleBarStyle: "hidden",
+    titleBarStyle: "hidden-inset",
   })
   win.on('close', function () { win = null })
   win.loadURL("https://nitro.powerhrg.com/connect")
